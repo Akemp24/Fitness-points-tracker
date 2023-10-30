@@ -20,7 +20,7 @@ const pointTransactionSchema = new mongoose.Schema({
 });
 
 // define model
-const pointTransaction = mongoose.model('PointTransaction', pointTransactionSchema);
+const PointTransaction = mongoose.model('PointTransaction', pointTransactionSchema);
 
 // export model
-module.exports = pointTransaction;
+module.exports = PointTransaction;
