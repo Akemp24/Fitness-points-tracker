@@ -2,8 +2,8 @@
 const mongoose = requre('mongoose');
 const bcrypt = require('bcrypt');
 
-// define user schema
-const userSchema = new mongoose.Schema({
+// define exercise schema
+const exerciseSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -21,3 +21,9 @@ const userSchema = new mongoose.Schema({
         ref: 'User',
     },
 });
+
+// define exercise model
+const Exercise = mongoose.model('Exercise', exerciseSchema);
+
+// export exercise model
+module.exports = Exercise;
