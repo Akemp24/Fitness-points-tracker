@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     },
     points: {
         type: Number,
-    },
+    }
 });
 
 // define prehook method to hash password

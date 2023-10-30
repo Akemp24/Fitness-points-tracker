@@ -1,6 +1,5 @@
 // import required modules
 const mongoose = requre('mongoose');
-const bcrypt = require('bcrypt');
 
 // define exercise schema
 const exerciseSchema = new mongoose.Schema({

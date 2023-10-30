@@ -1,23 +1,26 @@
 // import required modules
 const mongoose = requre('mongoose');
-const bcrypt = require('bcrypt');
 
-// define user schema
-const userSchema = new mongoose.Schema({
-    username: {
+// define pointTransaction schema
+const pointTransactionSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    description: {
         type: String,
         required: true,
-        unique: true,
     },
-    password: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        unique: true,
-    },
-    points: {
+    pointsChange: {
         type: Number,
     },
+    date: {
+        type: Date,
+    }
 });
+
+// define model
+const pointTransaction = mongoose.model('PointTransaction', pointTransactionSchema);
+
+// export model
+module.exports = pointTransaction;
